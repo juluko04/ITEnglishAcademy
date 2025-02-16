@@ -1,0 +1,237 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+</head>
+
+<body class="body-whea">
+<!-- Card de cursos -->
+<div class="container">
+  <div class="row">
+    <!-- LEVEL 1 -->
+    <div class="col-md-6 mb-4">
+      <div class="card ancho-card display-card">
+        <div class="rectangulo-card" id="rectanguloCard1">
+          <span>LEVEL 1</span>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">LEVEL 1: {{ start_dates_1 }} - {{ end_dates_2 }}</h5>
+          <h6 class="card-subtitle mb-2 text-body-secondary mt-2 mb-2">
+            {{ descripcion_1 }}
+          </h6>
+          <a href="#" class="card-link btn btn-outline-primary" id="toggleTextLink1">
+            Ver más información
+          </a>
+        </div>
+        <div id="collapseInfo1" class="collapse">
+          <div class="card-body text-center">
+            <p>Unidad 1: Uso de adjetivos, verbos y sustantivos en conversaciones básicas.</p>
+            <p>Unidad 2: Expresión en presente y descripción de experiencias laborales.</p>
+            <p>Unidad 3: Enfoque en el uso del pasado simple y formulación de preguntas.</p>
+            <p>Unidad 4: Uso de tiempos futuros para organizar reuniones y eventos.</p>
+            <h3>{{ precio_1 }}</h3>
+            <p>Método de pago: A traves de mercadopago con cualquier metodo de pago.</p>
+            <a href="#Inscripcion" class="card-link btn btn-primary">
+              Inscribite
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- LEVEL 2 -->
+    <div class="col-md-6 mb-4">
+      <div class="card ancho-card display-card">
+        <div class="rectangulo-card" id="rectanguloCard2">
+          <span>LEVEL 2</span>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">LEVEL 2</h5>
+          <h6 class="card-subtitle mb-2 text-body-secondary mt-2 mb-2">
+            Se aprenderán a utilizar e intercambiar tiempos verbales, estructuras comparativas y condicionales para describir tareas, hacer sugerencias, discutir soluciones hipotéticas y profesionalizar la producción oral y escrita en situaciones laborales.
+          </h6>
+          <a href="#" class="card-link btn btn-outline-primary" id="toggleTextLink2">
+            Ver más información
+          </a>
+        </div>
+        <div id="collapseInfo2" class="collapse">
+          <div class="card-body text-center">
+            <p>Integración de tiempos verbales presentes y pasados en descripciones laborales.</p>
+            <p>Uso de estructuras comparativas y adjetivos para comparar tareas, procesos y productos.</p>
+            <p>Verbos modales y estructuras condicionales para sugerir soluciones.</p>
+            <p>Uso de conectores de adhesión, contraste y opinión en producciones orales y escritas.</p>
+            <h3>$120.000</h3>
+            <p>Método de pago: Transferencia bancaria o tarjeta de crédito.</p>
+            <a href="#Inscripcion" class="card-link btn btn-primary">
+              Inscribite
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- LEVEL 3 -->
+    <div class="col-md-6 mb-4">
+      <div class="card ancho-card display-card">
+        <div class="rectangulo-card" id="rectanguloCard3">
+          <span>LEVEL 3</span>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">LEVEL 3</h5>
+          <h6 class="card-subtitle mb-2 text-body-secondary mt-2 mb-2">
+            Los estudiantes serán capaces de formular preguntas, expresar acuerdos y desacuerdos, describir hábitos laborales y logros profesionales, y transcribir mensajes utilizando una variedad de tiempos verbales, estructuras comparativas y vocabulario técnico.
+          </h6>
+          <a href="#" class="card-link btn btn-outline-primary" id="toggleTextLink3">
+            Ver más información
+          </a>
+        </div>
+        <div id="collapseInfo3" class="collapse">
+          <div class="card-body text-center">
+            <p>Uso de tiempos verbales presentes, pasados y perfectos en reuniones de seguimiento.</p>
+            <p>Descripción de hábitos laborales utilizando estructuras como 'be used to'.</p>
+            <p>Expresión de acuerdos y desacuerdos en conversaciones profesionales.</p>
+            <p>Uso de la voz pasiva para describir procesos y tareas realizadas.</p>
+            <h3>$140.000</h3>
+            <p>Método de pago: Transferencia bancaria o tarjeta de crédito.</p>
+            <a href="#Inscripcion" class="card-link btn btn-primary">
+              Inscribite
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- LEVEL 4 -->
+    <div class="col-md-6 mb-4">
+      <div class="card ancho-card display-card">
+        <div class="rectangulo-card" id="rectanguloCard4">
+          <span>LEVEL 4</span>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">LEVEL 4</h5>
+          <h6 class="card-subtitle mb-2 text-body-secondary mt-2 mb-2">
+            Se aprenderá a describir requerimientos de manera clara y asertiva, utilizar la voz pasiva para procesos y procedimientos, expresar especulaciones, reportar resultados de reuniones y ajustar el discurso al nivel adecuado usando tiempos verbales y estructuras avanzadas.
+          </h6>
+          <a href="#" class="card-link btn btn-outline-primary" id="toggleTextLink4">
+            Ver más información
+          </a>
+        </div>
+        <div id="collapseInfo4" class="collapse">
+          <div class="card-body text-center">
+            <p>Vocabulario de manejo de proyectos con integración de tiempos verbales.</p>
+            <p>Expresión de sugerencias, especulaciones y obligaciones con verbos modales.</p>
+            <p>Uso de Reported Speech para reportar resultados de reuniones.</p>
+            <p>Ajuste del discurso al nivel adecuado utilizando estructuras verbales avanzadas.</p>
+            <h3>$160.000</h3>
+            <p>Método de pago: Transferencia bancaria o tarjeta de crédito.</p>
+            <a href="#Inscripcion" class="card-link btn btn-primary">
+              Inscribite
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- LEVEL 5 -->
+    <div class="col-md-6 mb-4">
+      <div class="card ancho-card display-card">
+        <div class="rectangulo-card" id="rectanguloCard5">
+          <span>LEVEL 5</span>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">LEVEL 5</h5>
+          <h6 class="card-subtitle mb-2 text-body-secondary mt-2 mb-2">
+            Serán capaces de expresar reflexiones sobre proyectos, utilizar tiempos verbales y estructuras complejas para comparar resultados, redactar reportes y correos profesionales, y corregir errores comunes de traducción español-inglés en el ámbito IT.
+          </h6>
+          <a href="#" class="card-link btn btn-outline-primary" id="toggleTextLink5">
+            Ver más información
+          </a>
+        </div>
+        <div id="collapseInfo5" class="collapse">
+          <div class="card-body text-center">
+            <p>Uso del pasado perfecto simple y continuo para diferenciar secuencias de acciones.</p>
+            <p>Uso de cláusulas relativas reducidas para descripciones y adhesión de información.</p>
+            <p>Verbos modales para describir acciones a mejorar y dar feedback.</p>
+            <p>Formación de palabras con sufijos y prefijos en contexto profesional.</p>
+            <h3>$180.000</h3>
+            <p>Método de pago: Transferencia bancaria o tarjeta de crédito.</p>
+            <a href="#Inscripcion" class="card-link btn btn-primary">
+              Inscribite
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- LEVEL 6 -->
+    <div class="col-md-6 mb-4">
+      <div class="card ancho-card display-card">
+        <div class="rectangulo-card" id="rectanguloCard6">
+          <span>LEVEL 6</span>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">LEVEL 6</h5>
+          <h6 class="card-subtitle mb-2 text-body-secondary mt-2 mb-2">
+            Estudiantes capaces de debatir sobre el estado del campo IT, describir proyectos complejos utilizando tiempos verbales avanzados, y emplear estructuras formales, herramientas lingüísticas para mejorar la claridad y precisión en la comunicación oral y escrita.
+          </h6>
+          <a href="#" class="card-link btn btn-outline-primary" id="toggleTextLink6">
+            Ver más información
+          </a>
+        </div>
+        <div id="collapseInfo6" class="collapse">
+          <div class="card-body text-center">
+            <p>Herramientas de argumentación con estructuras de inversión, sustitución y omisión.</p>
+            <p>Uso de tiempos verbales (presentes, futuros, pasados y perfectos) y estructuras pasivas.</p>
+            <p>Frases nominales y modificación de sustantivos.</p>
+            <p>Corrección de errores frecuentes en hablantes de español en el ámbito IT.</p>
+            <h3>$200.000</h3>
+            <p>Método de pago: Transferencia bancaria o tarjeta de crédito.</p>
+            <a href="#Inscripcion" class="card-link btn btn-primary">
+              Inscribite
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Script para colapsar información del curso -->
+<script>
+  const toggleLinks = document.querySelectorAll('[id^="toggleTextLink"]');
+  const collapseSections = document.querySelectorAll('[id^="collapseInfo"]');
+  const rectangulos = document.querySelectorAll('[id^="rectanguloCard"]');
+  const collapses = Array.from(collapseSections).map((section) => new bootstrap.Collapse(section, { toggle: false }));
+
+  toggleLinks.forEach((toggleLink, index) => {
+    toggleLink.addEventListener('click', (event) => {
+      event.preventDefault();
+      const collapseSection = collapseSections[index];
+      const rectangulo = rectangulos[index];
+      if (collapseSection.classList.contains('show')) {
+        collapses[index].hide();
+        toggleLink.textContent = 'Ver más información';
+        rectangulo.classList.remove('rectangulo-expandido');
+      } else {
+        collapses[index].show();
+        toggleLink.textContent = 'Ver menos información';
+        rectangulo.classList.add('rectangulo-expandido');
+      }
+    });
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+
+
+</html>

@@ -1,0 +1,121 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Inscripción</title>
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://unpkg.com/htmx.org@1.9.2"></script>
+</head>
+<body>
+    <div class="container">
+        <img src="{% static 'imagenes/contactus.png' %}" alt="ITEA" class="img-form-inscription">
+        <div class="form-container">
+            <h2 style="padding: 5px;">Inscripción ▼</h2>
+            <form action="{% url 'inscription' %}" method="POST">
+                {% csrf_token %}
+                <h3>Información personal</h3>
+                <input type="text" name="nombre" placeholder="Nombre y apellido*" required minlength="3" maxlength="50">
+                <input type="email" name="correo" placeholder="Correo*" required maxlength="100">
+                <input type="tel" name="telefono" placeholder="Teléfono*" required maxlength="15">
+                
+                <select name="fechaSeleccionada" required>
+                    <option value="">Selecciona una fecha y horario</option>
+                    {% for schedule in schedules %}
+                        <option value="{{ schedule.date }}_{{ schedule.schedule }}">{{ schedule.date }} - {{ schedule.schedule }}</option>
+                    {% endfor %}
+                </select>
+                
+                <select name="nivelInteres" required>
+                    <option value="">Selecciona un nivel de interés</option>
+                    {% for level in levels %}
+                        <option value="{{ level }}">{{ level }}</option>
+                    {% endfor %}
+                </select>
+                
+                <h5>Información laboral (Opcional)</h5>
+                <p>¡Así podremos personalizar aún más las clases!</p>
+                <label>
+                    <input type="radio" name="situacionLaboral" value="En relación de dependencia" checked> En relación de dependencia
+                </label>
+                <label>
+                    <input type="radio" name="situacionLaboral" value="Freelance"> Freelance
+                </label>
+                <label>
+                    <input type="radio" name="situacionLaboral" value="No trabajo"> No trabajo
+                </label>
+                
+                <input type="text" name="empresa" placeholder="Empresa o sector de trabajo" maxlength="100">
+                <input type="text" name="linkedin" placeholder="LinkedIn" maxlength="100">
+                
+                <button id="inscribirme-btn" type="submit">
+                    Inscribirme
+                </button>
+                
+                <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+                        const form = document.querySelector("form");
+                        const button = document.getElementById("inscribirme-btn");
+                
+                        form.addEventListener("submit", function () {
+                            // Deshabilitar el botón y agregar efecto de carga
+                            button.disabled = true;
+                            button.innerHTML = `<span class="spinner-border spinner-border-sm"></span> Procesando...`;
+                            button.classList.add("loading");
+                
+                            // Simulación de finalización (cuando se redirige a MercadoPago)
+                            setTimeout(() => {
+                                button.innerHTML = "¡Inscripción Completa! Redirigiendo al pago...";
+                                button.classList.remove("loading");
+                                button.classList.add("success");
+                            }, 3000); // Tiempo estimado antes de la redirección
+                        });
+                    });
+                </script>
+
+                <style>
+                    form input,
+                    form select,
+                    form label {
+                        margin-bottom: 15px; /* Espacio entre los campos */
+                    }
+
+                    #inscribirme-btn {
+                    background-color: #ff4958;
+                    color: white;
+                    border: none;
+                    padding: 10px 20px;
+                    cursor: pointer;
+                    transition: background-color 0.3s ease;
+                    }
+
+                    #inscribirme-btn:hover {
+                        background-color: #e73c48; /* Un tono más oscuro en hover */
+                    }
+
+                    #inscribirme-btn.loading {
+                        background-color: #ffa500 !important; /* Naranja para indicar proceso */
+                        cursor: not-allowed;
+                    }
+
+                    #inscribirme-btn.success {
+                        background-color: #00e034 !important; /* Verde para éxito */
+                    }
+
+                    #inscribirme-btn:disabled {
+                        background-color: #f38e96;
+                    }
+                </style>
+
+
+
+                </style>
+                
+            </form>
+        </div>
+    </div>
+</body>
+</html>

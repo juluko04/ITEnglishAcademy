@@ -1,0 +1,5 @@
+{% for date in dates %}
+<option value="{{ date.id }}">{{ date.date_name }}</option>
+{% empty %}
+<option value="">No hay fechas disponibles</option>
+{% endfor %}

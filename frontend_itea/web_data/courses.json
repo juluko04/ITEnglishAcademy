@@ -1,0 +1,152 @@
+[
+  {
+    "id": 1,
+    "title": "LEVEL 1",
+    "level": "LEVEL 1",
+    "description": "Los estudiantes aprenderán a presentarse, describir experiencias laborales, formular preguntas y organizar reuniones utilizando tiempos verbales adecuados, vocabulario técnico y estructuras gramaticales clave.",
+    "price": 100000,
+    "units": [
+      "Uso de adjetivos, verbos y sustantivos en conversaciones básicas.",
+      "Expresión en presente y descripción de experiencias laborales.",
+      "Enfoque en el uso del pasado simple y formulación de preguntas.",
+      "Uso de tiempos futuros para organizar reuniones y eventos."
+    ],
+    "dates": [
+      {
+        "id": 1,
+        "date": "17/03/2025",
+        "schedule": "Lunes y Miércoles de 6:00 p.m. a 8:00 p.m."
+      },
+      {
+        "id": 2,
+        "date": "18/03/2025",
+        "schedule": "Martes y Jueves de 6:00 p.m. a 8:00 p.m."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "LEVEL 2",
+    "level": "LEVEL 2",
+    "description": "Se aprenderán a utilizar e intercambiar tiempos verbales, estructuras comparativas y condicionales para describir tareas, hacer sugerencias, discutir soluciones hipotéticas y profesionalizar la producción oral y escrita en situaciones laborales.",
+    "price": 120000,
+    "units": [
+      "Integración de tiempos verbales presentes y pasados en descripciones laborales.",
+      "Uso de estructuras comparativas y adjetivos para comparar tareas, procesos y productos.",
+      "Verbos modales y estructuras condicionales para sugerir soluciones.",
+      "Uso de conectores de adhesión, contraste y opinión en producciones orales y escritas."
+    ],
+    "dates": [
+      {
+        "id": 1,
+        "date": "18/03/2025",
+        "schedule": "Lunes y Miércoles de 6:00 p.m. a 8:00 p.m."
+      },
+      {
+        "id": 2,
+        "date": "19/03/2025",
+        "schedule": "Martes y Jueves de 6:00 p.m. a 8:00 p.m."
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "LEVEL 3",
+    "level": "LEVEL 3",
+    "description": "Los estudiantes serán capaces de formular preguntas, expresar acuerdos y desacuerdos, describir hábitos laborales y logros profesionales, y transcribir mensajes utilizando una variedad de tiempos verbales, estructuras comparativas y vocabulario técnico.",
+    "price": 140000,
+    "units": [
+      "Uso de tiempos verbales presentes, pasados y perfectos en reuniones de seguimiento.",
+      "Descripción de hábitos laborales utilizando estructuras como 'be used to'.",
+      "Expresión de acuerdos y desacuerdos en conversaciones profesionales.",
+      "Uso de la voz pasiva para describir procesos y tareas realizadas."
+    ],
+    "dates": [
+      {
+        "id": 1,
+        "date": "18/03/2025",
+        "schedule": "Lunes y Miércoles de 6:00 p.m. a 8:00 p.m."
+      },
+      {
+        "id": 2,
+        "date": "19/03/2025",
+        "schedule": "Martes y Jueves de 6:00 p.m. a 8:00 p.m."
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "LEVEL 4",
+    "level": "LEVEL 4",
+    "description": "Se aprenderá a describir requerimientos de manera clara y asertiva, utilizar la voz pasiva para procesos y procedimientos, expresar especulaciones, reportar resultados de reuniones y ajustar el discurso al nivel adecuado usando tiempos verbales y estructuras avanzadas.",
+    "price": 160000,
+    "units": [
+      "Vocabulario de manejo de proyectos con integración de tiempos verbales.",
+      "Expresión de sugerencias, especulaciones y obligaciones con verbos modales.",
+      "Uso de Reported Speech para reportar resultados de reuniones.",
+      "Ajuste del discurso al nivel adecuado utilizando estructuras verbales avanzadas."
+    ],
+    "dates": [
+      {
+        "id": 1,
+        "date": "17/03/2025",
+        "schedule": "Lunes y Miércoles de 6:00 p.m. a 8:00 p.m."
+      },
+      {
+        "id": 2,
+        "date": "18/03/2025",
+        "schedule": "Martes y Jueves de 6:00 p.m. a 8:00 p.m."
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "LEVEL 5",
+    "level": "LEVEL 5",
+    "description": "Serán capaces de expresar reflexiones sobre proyectos, utilizar tiempos verbales y estructuras complejas para comparar resultados, redactar reportes y correos profesionales, y corregir errores comunes de traducción español-inglés en el ámbito IT.",
+    "price": 180000,
+    "units": [
+      "Uso del pasado perfecto simple y continuo para diferenciar secuencias de acciones.",
+      "Uso de cláusulas relativas reducidas para descripciones y adhesión de información.",
+      "Verbos modales para describir acciones a mejorar y dar feedback.",
+      "Formación de palabras con sufijos y prefijos en contexto profesional."
+    ],
+    "dates": [
+      {
+        "id": 1,
+        "date": "19/03/2025",
+        "schedule": "Lunes y Miércoles de 6:00 p.m. a 8:00 p.m."
+      },
+      {
+        "id": 2,
+        "date": "20/03/2025",
+        "schedule": "Martes y Jueves de 6:00 p.m. a 8:00 p.m."
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "LEVEL 6",
+    "level": "LEVEL 6",
+    "description": "Estudiantes capaces de debatir sobre el estado del campo IT, describir proyectos complejos utilizando tiempos verbales avanzados, y emplear estructuras formales, herramientas lingüísticas para mejorar la claridad y precisión en la comunicación oral y escrita.",
+    "price": 200000,
+    "units": [
+      "Herramientas de argumentación con estructuras de inversión, sustitución y omisión.",
+      "Uso de tiempos verbales (presentes, futuros, pasados y perfectos) y estructuras pasivas.",
+      "Frases nominales y modificación de sustantivos.",
+      "Corrección de errores frecuentes en hablantes de español en el ámbito IT."
+    ],
+    "dates": [
+      {
+        "id": 1,
+        "date": "21/03/2025",
+        "schedule": "Lunes y Miércoles de 6:00 p.m. a 8:00 p.m."
+      },
+      {
+        "id": 2,
+        "date": "22/03/2025",
+        "schedule": "Martes y Jueves de 6:00 p.m. a 8:00 p.m."
+      }
+    ]
+  }
+]

@@ -1,0 +1,249 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Meta tags y título -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IT English Academy</title>
+  
+  <!-- CSS de Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  
+  <!-- JavaScript de Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- CSS personalizado -->
+  <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg" style="position: fixed;">
+    <div class="container-fluid">
+      <a href="#">
+        <img src="{% static 'imagenes/logo_ itea_fuccia_jpg.jpg' %}" class="navbar-brand" alt="Logo" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active colorfondo" aria-current="page" href="#Home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link colorfondo" href="#Cursos">Cursos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link colorfondo" href="#Nosotros">Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link colorfondo" href="#Inscripcion">Inscripcion</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Sección Home -->
+  <div id='Home' class="secciones-mov"></div>
+  <header class="header-style viewp">
+    <div class="header-text text-center text-md-start">
+      <h1 class="mi-texto">El inglés que necesitas para potenciar tu carrera IT</h1>
+      <p class="mi-texto">Que el idioma no sea un impedimento: Amplía tus horizontes en el sector tecnológico con inglés diseñado para el mundo IT.</p>
+      <div class="d-flex justify-content-center justify-content-md-start gap-4">
+        <a href="#Cursos"><button type="button" class="btn btn-danger btn-lg rounded-4 px-5 py-1 mi-texto">Ver cursos</button></a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdgfmAgJpK3_IsqcqeLpJ5_VW64iCqOq5l2YKK0K3nbYRs7ug/viewform?usp=sharinghttps://docs.google.com/forms/d/e/1FAIpQLSdgfmAgJpK3_IsqcqeLpJ5_VW64iCqOq5l2YKK0K3nbYRs7ug/viewform?usp=sharing"><button type="button" class="btn btn-danger btn-lg rounded-4 px-5 py-1 mi-texto">Nivelación</button></a>
+      </div>
+    </div>
+    <img src="{% static 'imagenes/image_header.png' %}" alt="imgheader" class="header-imgheader mi-texto" />
+  </header>
+
+  <!-- Script para animaciones de texto -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const elementos = document.querySelectorAll(".mi-texto");
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            } else {
+              entry.target.classList.remove("visible");
+            }
+          });
+        },
+        {
+          threshold: 0.2,
+        }
+      );
+      elementos.forEach((el) => observer.observe(el));
+    });
+  </script>
+
+  <!-- Sección Cursos -->
+  <div class="subheader-text text-center mx-auto">
+    <h2 id="Cursos" class="secciones-mov">Conoce nuestros cursos</h2>
+    <p>
+      Duración de los cursos: 2 meses - 16 clases <br />
+      Opcional adicional para todos los niveles: clases de pronunciación <br />
+      Nivelación sin cargo para encontrar tu nivel <br />
+    </p>
+  </div>
+
+  <!-- Card de curso -->
+
+  {% include 'card.html' %}
+
+<!-- Fin de Card de curso -->
+
+  <!-- Sección Nosotros -->
+  <section>
+    <div class="ourteam-style">
+      <h1 id="Nosotros" class="secciones-mov">Nosotros</h1>
+      <p>
+        ITEA surge ante la necesidad de desarrolladores, técnicos, diseñadores e interesados en el mundo <br />
+        IT de encontrar un espacio personalizado para el aprendizaje del Inglés. Está pensado para ser un <br />
+        lugar de aprendizaje en contexto, con las herramientas, vocabulario y estructuras que realmente <br />
+        necesitas para lograr que el idioma ya no sea un impedimento para alcanzar tus objetivos.
+      </p>
+
+      <div class="ourteam-container">
+        <div class="ourteam-member">
+          <img src="{% static 'imagenes/clina.png' %}" alt="Clina" class="ourteam-img" />
+          <p>
+            Profesora de Inglés con experiencia en dictado <br />
+            de clases tanto online como presencial en <br />
+            todos los niveles.
+          </p>
+        </div>
+        <div class="ourteam-member">
+          <img src="{% static 'imagenes/jan.png' %}" alt="Jan" class="ourteam-img" />
+          <p>Abogado y programador IT.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección Inscripción -->
+  <div>
+    <div class="container">
+      <img src="{% static 'imagenes/contactus.png' %}" alt="ITEA" class="img-form-inscription">
+      <div class="form-container" id="Inscripcion">
+        <h2 style="padding: 5px;">Inscripción ▼</h2>
+        <form name="form_type" method="POST">
+          {% csrf_token %}
+          <h3>Información personal</h3>
+          <input type="hidden" name="form_type" value="inscripcion">
+          <input type="text" name="nombre" placeholder="Nombre y apellido*" required minlength="3" maxlength="50">
+          <input type="email" name="correo" placeholder="Correo*" required maxlength="100">
+          <input type="tel" name="telefono" placeholder="Teléfono*" required maxlength="15">
+
+          <h5>¡Elegí tu curso!</h5>
+
+          {% include 'index.html' %}
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script para el botón de inscripción -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const form = document.querySelector("form");
+      const button = document.getElementById("inscribirme-btn");
+
+      form.addEventListener("submit", function () {
+        button.disabled = true;
+        button.innerHTML = `<span class="spinner-border spinner-border-sm"></span> Procesando...`;
+        button.classList.add("loading");
+
+        setTimeout(() => {
+          button.innerHTML = "¡Inscripción Completa! Redirigiendo al pago...";
+          button.classList.remove("loading");
+          button.classList.add("success");
+        }, 3000);
+      });
+    });
+  </script>
+
+  <!-- Estilos para el formulario de inscripción -->
+  <style>
+    form input,
+    form select,
+    form label {
+      margin-bottom: 15px;
+    }
+
+    #inscribirme-btn {
+      background-color: #ff4958;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    #inscribirme-btn:hover {
+      background-color: #e73c48;
+    }
+
+    #inscribirme-btn.loading {
+      background-color: #ffa500 !important;
+      cursor: not-allowed;
+    }
+
+    #inscribirme-btn.success {
+      background-color: #00e034 !important;
+    }
+
+    #inscribirme-btn:disabled {
+      background-color: #f38e96;
+    }
+  </style>
+
+  <!-- Sección de contacto -->
+  <div class="container-footer">
+    <div class="text-contact">
+      <h2 style="padding: 20px;">¿Tenés dudas?</h2>
+      <img src="{% static 'imagenes/image_end.png' %}" alt="ITEA" class="img-form-imageend" />
+    </div>
+    <div class="form-container">
+      <form name="form_type" method="POST">
+        {% csrf_token %}
+        <h3>¡Contáctanos!</h3>
+        <input type="hidden" name="form_type" value="contacto">
+        <input type="text" name="nombre" placeholder="Nombre y apellido*" required maxlength="50"/>
+        <input type="email" name="correo" placeholder="Correo*" required maxlength="100"/>
+        <input type="tel" name="telefono" placeholder="Teléfono" required maxlength="20"/>
+        <input type="text" name="empresa" placeholder="Empresa" required maxlength="30"/>
+        <input type="text" name="consulta" placeholder="Consulta" required maxlength="200"/>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <nav class="footbar">
+    <img src="{% static 'imagenes/logo_ itea_fuccia_jpg.jpg' %}" alt="Logo" class="footbar-logo" />
+    <div class="footbar-links">
+      <p>© 2025 ITEA</p>
+      <p>itea@itea.com</p>
+      <a href="https://www.linkedin.com/in/julian-konop-92a6aa191/">
+        <img src="{% static 'imagenes/linkedinfoto.png' %}" alt="LinkedIn" class="enlace-linkedin" />
+      </a>
+    </div>
+  </nav>
+
+  <!-- JavaScript de Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+</html>

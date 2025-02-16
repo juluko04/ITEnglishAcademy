@@ -1,0 +1,88 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+</head>
+
+<body class="body-whea">
+
+  <div class="container">
+    <div class="row">
+      {% for course in courses_og %}
+      <div class="col-md-6 mb-4">
+        <div class="card ancho-card display-card">
+          <div class="rectangulo-card " id="rectanguloCard">
+            <span>{{ course.name }}</span>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">{{ course.name }} </h5>
+            <h6>Inicio de clases: {{ course.start_date }} Hasta: {{ course.end_date }}</h6>
+            <h6 class="card-subtitle mb-2 text-body-secondary mt-2 mb-2">
+              {{ course.description }}
+            </h6>
+            <a href="#" class="card-link btn btn-outline-primary" id="toggleTextLink">
+              Ver más información
+            </a>
+          </div>
+          <div id="collapseInfo" class="collapse">
+            <div class="card-body">
+              <ul class="list-unstyled">
+                {% for unidad in course.unitys_list %}
+                  <li><p>{{ unidad }}</p></li>
+                {% endfor %}
+              </ul>
+              <h3>{{ course.price }}</h3>
+              <strong><p>Método de pago: A través de mercadopago con cualquier método de pago.</p></strong>
+              <a href="#Inscripcion" class="card-link btn btn-primary">
+                Inscribite
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <script>
+    // Obtener el enlace y la sección colapsable
+    const toggleLink = document.getElementById('toggleTextLink');
+    const collapseSection = document.getElementById('collapseInfo');
+    const rectangulo = document.getElementById('rectanguloCard');
+
+    // Crear el objeto Collapse de Bootstrap para controlar manualmente los eventos
+    const collapse = new bootstrap.Collapse(collapseSection, {
+      toggle: false // No queremos que se haga automáticamente el colapso al hacer click
+    });
+
+    // Añadir el evento para el clic en el enlace
+    toggleLink.addEventListener('click', (event) => {
+      event.preventDefault(); // Evitar el comportamiento predeterminado del enlace
+
+      // Comprobar si la sección está abierta o cerrada
+      if (collapseSection.classList.contains('show')) {
+        collapse.hide(); // Si está abierta, la ocultamos
+        toggleLink.textContent = 'Ver más información'; // Cambiar texto al colapsar
+        rectangulo.classList.remove('rectangulo-expandido'); // Volver al color original
+      } else {
+        collapse.show(); // Si está cerrada, la mostramos
+        toggleLink.textContent = 'Ver menos información'; // Cambiar texto al expandir
+        rectangulo.classList.add('rectangulo-expandido'); // Cambiar a rojo cuando se expanda
+      }
+    });
+  </script>
+  
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
